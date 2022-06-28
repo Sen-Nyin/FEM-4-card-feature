@@ -6,6 +6,11 @@
     padding-inline: 3.9rem;
     padding-block: 8.5rem;
 
+    @include a.breakpoint(lg,min) {
+        padding-inline: 16.5rem;
+        padding-block: 8rem;
+    }
+
     &__heading-main-head {
 
         &--thin {

@@ -115,7 +115,7 @@ $breakpoints: (xs: (min: calcEM($xs),
 // RESPONSIVE CLAMP
 // //////////////////////////////
 
-@mixin getclamp($property, $minsize, $maxsize, $minwidth, $maxwidth) {
+@mixin getclampM($property, $minsize, $maxsize, $minwidth, $maxwidth) {
 
     // convert vp widths to rem
     $minw: math.div($minwidth, 10);
@@ -126,4 +126,17 @@ $breakpoints: (xs: (min: calcEM($xs),
     $yint: (0 - $minw) * $slope + $minsize;
 
     #{$property}: clamp($minsize * 1rem, ($yint * 1rem) + ($slope * 100vw), $maxsize * 1rem);
+}
+
+@function getclampF($minsize, $maxsize, $minwidth, $maxwidth) {
+
+    // convert vp widths to rem
+    $minw: math.div($minwidth, 10);
+    $maxw: math.div($maxwidth, 10);
+
+    // calculatae slope
+    $slope: math.div(($maxsize - $minsize), ($maxw - $minw));
+    $yint: (0 - $minw) * $slope + $minsize;
+
+    @return clamp($minsize * 1rem, ($yint * 1rem) + ($slope * 100vw), $maxsize * 1rem);
 }
