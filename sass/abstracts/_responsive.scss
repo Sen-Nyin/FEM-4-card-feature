@@ -115,7 +115,7 @@ $breakpoints: (xs: (min: calcEM($xs),
 // RESPONSIVE CLAMP
 // //////////////////////////////
 
-@mixin getclampM($property, $minsize, $maxsize, $minwidth, $maxwidth) {
+@mixin getclamp($property, $minsize, $maxsize, $minwidth, $maxwidth) {
 
     // convert vp widths to rem
     $minw: math.div($minwidth, 10);

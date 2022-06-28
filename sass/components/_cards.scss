@@ -25,7 +25,7 @@
     &__card {
         border-radius: .8rem;
         box-shadow: 0 1.5rem 3rem -1.1rem rgba(131, 166, 210, 0.5);
-        @include a.getclampM(padding,2.8,3.2,375,1024);
+        @include a.getclamp(padding,2.8,3.2,375,1024);
         min-height: 22.2rem;
         position: relative;
         max-width: 35rem;

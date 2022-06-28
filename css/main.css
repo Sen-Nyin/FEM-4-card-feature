@@ -107,7 +107,7 @@ body {
 .feature-cards__card {
   border-radius: 0.8rem;
   box-shadow: 0 1.5rem 3rem -1.1rem rgba(131, 166, 210, 0.5);
-  padding: 2.8rem;
+  padding: clamp(2.8rem, 2.5688751926rem + 0.6163328197vw, 3.2rem);
   min-height: 22.2rem;
   position: relative;
   max-width: 35rem;
@@ -116,6 +116,7 @@ body {
 @media only screen and (min-width: 64em) {
   .feature-cards__card {
     max-width: 35rem;
+    min-height: 25rem;
   }
 }
 .feature-cards__card-1 {
@@ -160,6 +161,12 @@ body {
   align-items: center;
   padding-inline: 3.9rem;
   padding-block: 8.5rem;
+}
+@media only screen and (min-width: 64em) {
+  .features {
+    padding-inline: 16.5rem;
+    padding-block: 8rem;
+  }
 }
 .features__heading-main-head--thin {
   font-weight: var(--font-weight-thin);
