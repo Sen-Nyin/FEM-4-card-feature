@@ -77,5 +77,8 @@
         position: absolute;
         bottom: 2.8rem;
         right: 2.8rem;
+
+        @include a.getclamp(width,5.7,6.4,375,1024);
+        @include a.getclamp(height,5.7,6.4,375,1024);
     }
 }
