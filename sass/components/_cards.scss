@@ -9,6 +9,7 @@
         "card2"
         "card3"
         "card4";
+    gap: 2.4rem;
 
     @include a.breakpoint(lg, min) {
         // grid-template-columns: repeat(6, 1fr);
@@ -34,9 +35,9 @@
             max-width: 35rem;
         }
 
-        &:not(:last-child) {
-            margin-bottom: 2.4rem;
-        }
+        // &:not(:last-child) {
+        //     margin-bottom: 2.4rem;
+        // }
 
         &-1 {
             border-top: .3rem solid var(--color-cyan);

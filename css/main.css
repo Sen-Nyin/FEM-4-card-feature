@@ -96,6 +96,7 @@ body {
 .feature-cards {
   display: grid;
   grid-template-areas: "card1" "card2" "card3" "card4";
+  gap: 2.4rem;
 }
 @media only screen and (min-width: 64em) {
   .feature-cards {
@@ -116,9 +117,6 @@ body {
   .feature-cards__card {
     max-width: 35rem;
   }
-}
-.feature-cards__card:not(:last-child) {
-  margin-bottom: 2.4rem;
 }
 .feature-cards__card-1 {
   border-top: 0.3rem solid var(--color-cyan);
@@ -179,4 +177,9 @@ body {
   text-align: center;
   padding-bottom: 7.6rem;
   max-width: 54rem;
+}
+@media only screen and (min-width: 64em) {
+  .features__heading-blurb {
+    padding-bottom: 6.4rem;
+  }
 }/*# sourceMappingURL=main.css.map */
